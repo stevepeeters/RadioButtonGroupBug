@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:s="clr-namespace:System;assembly=mscorlib"
+             xmlns:local="clr-namespace:MauiApp1"
+             x:Class="MauiApp1.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <HorizontalStackLayout x:Name="Group1Panel" 
+                                   RadioButtonGroup.GroupName="Group1" 
+                                   RadioButtonGroup.SelectedValue="{Binding BoolValue}"
+                                   x:DataType="local:ViewModel">
+                <Label Text="{Binding BoolValue, StringFormat='Value = |{0}|'}"/>
+                <RadioButton Content="True">
+                    <RadioButton.Value>
+                        <s:Boolean>True</s:Boolean>
+                    </RadioButton.Value>
+                </RadioButton>
+                <RadioButton Content="False">
+                    <RadioButton.Value>
+                        <s:Boolean>False</s:Boolean>
+                    </RadioButton.Value>
+                </RadioButton>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout x:Name="Group2Panel" 
+                                   RadioButtonGroup.GroupName="Group2" 
+                                   RadioButtonGroup.SelectedValue="{Binding BoolValue}"
+                                   x:DataType="local:ViewModel">
+                <Label Text="{Binding BoolValue, StringFormat='Value = |{0}|'}"/>
+                <RadioButton Content="True">
+                    <RadioButton.Value>
+                        <s:Boolean>True</s:Boolean>
+                    </RadioButton.Value>
+                </RadioButton>
+                <RadioButton Content="False">
+                    <RadioButton.Value>
+                        <s:Boolean>False</s:Boolean>
+                    </RadioButton.Value>
+                </RadioButton>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
